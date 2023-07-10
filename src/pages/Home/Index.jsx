@@ -2,6 +2,7 @@ import { Main } from "@/layouts/Main";
 import { Banner } from "@/components/Banner";
 import { useEffect, useState } from "react";
 import { Card } from "@/components/Card";
+import banner from "@/assets/img/banner.jpeg"
 
 export const Home = () => {
     const [logements, setLogements] = useState([])
@@ -15,10 +16,12 @@ export const Home = () => {
                 .catch((error) => console.log(error))
             )
     }, [])
-    
+
     return (
         <Main>
-            <Banner></Banner>
+            <Banner
+                bg={banner} title="Chez vous, partout et ailleurs"></Banner>
+
             <div className="cards">
                 {logements.map((logement) => {
                     return (

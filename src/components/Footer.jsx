@@ -1,7 +1,12 @@
-export const Footer = () => {
+import white_logo from '@/assets/img/logo/white-logo.svg'
+
+export const Footer = () =>{
     return (
-        <>
-            <div> Footer</div>
-        </>
-    )
+        <footer>
+            <div>
+                <div><img src={white_logo} alt="logo-white"/></div>
+                <div className="copyright">© 2023 Kasa. All rights reserved</div>
+            </div>
+        </footer>
+    );
 }

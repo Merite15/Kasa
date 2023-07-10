@@ -1,8 +1,13 @@
-export const Banner = () => {
+/* eslint-disable react/prop-types */
+
+export const Banner = (props) => {
+    const { title, bgImg } = props
+
     return (
-        <div className="banner">
+        <div className="banner" style={{ backgroundImage: `url(${bgImg})` }}>
             <div>
-                <span>Chez vous, partout et ailleurs</span></div>
+                <span>{title}</span>
+            </div>
         </div>
     );
 }

@@ -5,3 +5,9 @@
 .container {
     margin: 0 80px;
 }
+
+@media only screen and (max-width: $breakpoint-tablet) {
+    .container {
+        margin: 0 10px;
+    }
+}

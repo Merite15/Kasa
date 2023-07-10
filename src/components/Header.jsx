@@ -1,7 +1,7 @@
-import logo from '../assets/logo.svg'
+import logo from '@/assets/img/logo/logo.svg'
 import { NavLink } from "react-router-dom";
 
-export function Header() {
+export const Header= () => {
     let activeStyle = {
         textDecoration: "underline",
     };
@@ -9,7 +9,7 @@ export function Header() {
     return (
         <header>
             <div>
-                <img src={logo} alt="logo" />
+                <img className="logo" src={logo} alt="logo" />
             </div>
             <div>
                 <nav>

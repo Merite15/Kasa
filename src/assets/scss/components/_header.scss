@@ -19,3 +19,22 @@ nav ul li {
     font-size: 24px;
     line-height: 142.6%;
 }
+
+@media only screen and (max-width: $breakpoint-tablet) {
+    header {
+        padding: 10px 0;
+    }
+
+    nav ul li {
+        margin-left: 20px;
+    }
+
+    .navlink {
+        font-size: 16px;
+        text-transform: uppercase;
+    }
+
+    .logo {
+        width: 100px;
+    }
+}
