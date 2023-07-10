@@ -1,9 +1,15 @@
-export const Main = () => {
+/* eslint-disable react/prop-types */
+
+import { Header } from "@/components/Header";
+import { Footer } from "@/components/Footer";
+
+export const Main = (props) => {
     return (
-        <>
-            <div>
-                <p> Layout</p>
-            </div>
-        </>
-    )
+        <div className="container">
+            <Header></Header>
+            {props.children}
+            <Footer></Footer>
+        </div>
+
+    );
 }

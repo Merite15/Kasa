@@ -1,9 +1,9 @@
+import { Main } from "@/layouts/Main";
+
 export const About = () => {
     return (
-        <>
-            <div>
-                <p> A propos</p>
-            </div>
-        </>
-    )
+        <Main>
+            À propos
+        </Main>
+    );
 }
