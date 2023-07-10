@@ -1,0 +1,15 @@
+@import "./utils/variables";
+@import "./utils/functions";
+
+@import "./base/reset";
+@import "./base/typography";
+
+@import "./components/button";
+
+@import "./layout/header";
+@import "./layout/footer";
+
+@import "./pages/about";
+@import "./pages/home";
+@import "./pages/card";
+@import "./pages/error";
