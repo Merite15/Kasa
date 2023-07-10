@@ -1,16 +1,17 @@
 import logo from '@/assets/img/logo/logo.svg'
 import { NavLink } from "react-router-dom";
 
-export const Header= () => {
+export const Header = () => {
     let activeStyle = {
         textDecoration: "underline",
     };
-    
+
     return (
         <header>
             <div>
-                <img className="logo" src={logo} alt="logo" />
+                <NavLink to="/"><img className="logo" src={logo} alt="logo" /></NavLink>
             </div>
+            
             <div>
                 <nav>
                     <ul>

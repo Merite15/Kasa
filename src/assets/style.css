@@ -196,7 +196,7 @@ footer {
 .collapse {
   margin-top: 30px;
   width: 100%;
-  color: #ffffff;
+  color: #fff;
 }
 .collapse-head {
   background-color: #ff6060;
@@ -321,7 +321,7 @@ footer {
   font-style: normal;
   font-weight: 600;
   font-size: 18px;
-  color: #ffffff;
+  color: #fff;
   text-shadow: 2px 1px black;
 }
 
@@ -479,42 +479,40 @@ footer {
   width: 100%;
   text-align: center;
 }
-
-.notFound-code {
+.notFound__code {
   font-style: normal;
   font-weight: 700;
   font-size: 288px;
   line-height: 142.6%;
-  color: #FF6060;
+  color: #ff6060;
 }
-
-.text-error {
+.notFound__text {
   font-style: normal;
   font-weight: 500;
   font-size: 36px;
-  color: #FF6060;
+  color: #ff6060;
   margin: 30px 0;
 }
 
 .home-link {
   font-style: normal;
   font-weight: 500;
-  font-size: 18px;
+  font-size: 20px;
   text-decoration-line: underline;
-  color: #FF6060;
+  color: #ff6060;
   margin: 90px 0;
 }
 
 .home-nav-link {
-  color: #FF6060;
+  color: #ff6060;
 }
 
 @media only screen and (max-width: 600px) {
-  .notFound-code {
+  .notFound__code {
     font-size: 96px;
     margin-top: 100px;
   }
-  .text-error {
+  .notFound__text {
     font-size: 18px;
   }
   .home-link {

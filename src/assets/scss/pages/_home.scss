@@ -41,7 +41,7 @@
     height: 380px;
     width: 30%;
     margin: 20px 0;
-    background-color: #ff6060;
+    background-color: $primary-color;
     display: flex;
     align-items: flex-end;
     padding: 10px;
@@ -54,7 +54,7 @@
         font-style: normal;
         font-weight: 600;
         font-size: 18px;
-        color: #ffffff;
+        color: $secondary-color;
         text-shadow: 2px 1px black;
     }
 }

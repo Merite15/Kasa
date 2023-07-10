@@ -1,10 +1,10 @@
 .collapse {
     margin-top: 30px;
     width: 100%;
-    color: #ffffff;
+    color: $secondary-color;
 
     &-head {
-        background-color: #ff6060;
+        background-color: $primary-color;
         padding: 0 20px;
         border-radius: 5px;
         width: auto;
@@ -22,7 +22,7 @@
 
     &-content {
         background-color: #f7f7f7;
-        color: #ff6060;
+        color: $primary-color;
         padding: 20px;
         font-size: 24px;
         font-weight: 300;

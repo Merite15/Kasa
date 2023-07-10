@@ -2,7 +2,7 @@ import { createBrowserRouter } from "react-router-dom";
 import { NotFound } from "@/pages/Error/NotFound";
 import { Home } from "@/pages/Home/Index";
 import { About } from "@/pages/About/Index";
-import { Card } from "@/pages/Card/Index";
+import { Property } from "@/pages/Property/Index";
 
 const router = createBrowserRouter([
   {
@@ -18,8 +18,8 @@ const router = createBrowserRouter([
     element: <About />
   },
   {
-    path: "/card/:id",
-    element: <Card />,
+    path: "/property/:id",
+    element: <Property />,
     errorElement: <NotFound/>
   },
 ]);

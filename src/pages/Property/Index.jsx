@@ -5,7 +5,7 @@ import { useParams } from "react-router-dom";
 import { Tag } from "@/components/Tag";
 import { Collapse } from "@/components/Collapse";
 
-export const Card = () => {
+export const Property = () => {
 
     const params = useParams()
 
