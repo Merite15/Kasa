@@ -20,7 +20,7 @@ export const Home = () => {
     return (
         <Main>
             <Banner
-                bg={banner} title="Chez vous, partout et ailleurs"></Banner>
+                bgImg={banner} title="Chez vous, partout et ailleurs"></Banner>
 
             <div className="cards">
                 {logements.map((logement) => {

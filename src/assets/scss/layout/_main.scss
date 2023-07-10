@@ -2,12 +2,6 @@
     margin: 0 80px;
 }
 
-.flex-between {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
 @media only screen and (max-width: $breakpoint-tablet) {
     .container {
         margin: 0 10px;

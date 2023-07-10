@@ -3,7 +3,7 @@
     width: 100%;
     color: $secondary-color;
 
-    &-head {
+    &__head {
         background-color: $primary-color;
         padding: 0 20px;
         border-radius: 5px;
@@ -15,12 +15,12 @@
         cursor: pointer;
     }
 
-    &-title {
+    &__title {
         font-weight: 500;
         font-size: 24px;
     }
 
-    &-content {
+    &__content {
         background-color: #f7f7f7;
         color: $primary-color;
         padding: 20px;
@@ -31,7 +31,7 @@
     }
 
     @media only screen and (max-width: $breakpoint-tablet) {
-        &-content {
+        &__content {
             font-size: 12px;
             font-weight: 400;
             line-height: 17px;

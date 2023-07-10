@@ -6,7 +6,7 @@ import { Collapse } from "@/components/Collapse";
 export const About = () => {
     return (
         <Main>
-            <Banner bg={banner} title="A propos"/>
+            <Banner bgImg={banner}/>
 
             <Collapse title="Fiabilité"
                 content="Les annonces postées sur Kasa garantissent une fiabilité totale. Les photos sont conformes aux logements, et toutes les informations sont régulièrement vérifiées  par nos équipes." />
