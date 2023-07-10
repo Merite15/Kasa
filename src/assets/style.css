@@ -294,8 +294,82 @@ footer {
   text-shadow: 2px 1px black;
 }
 
-h1 {
+@media only screen and (max-width: 600px) {
+  .cards {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    background-color: transparent;
+    border-radius: 25px;
+    margin-top: 20px;
+    padding: 0;
+  }
+  .card {
+    border-radius: 10px;
+    height: 250px;
+    width: 100%;
+    margin: 10px 0;
+  }
+  .banner {
+    height: 125px;
+    border-radius: 10px;
+  }
+  .banner > div > span {
+    font-weight: 500;
+    font-size: 24px;
+    padding: 0 20px;
+  }
+  .banner > div {
+    border-radius: 10px;
+  }
+}
+.notFound {
+  display: flex;
+  justify-content: center;
+  width: 100%;
   text-align: center;
+}
+
+.notFound-code {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 288px;
+  line-height: 142.6%;
+  color: #FF6060;
+}
+
+.text-error {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 36px;
+  color: #FF6060;
+  margin: 30px 0;
+}
+
+.home-link {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  text-decoration-line: underline;
+  color: #FF6060;
+  margin: 90px 0;
+}
+
+.home-nav-link {
+  color: #FF6060;
+}
+
+@media only screen and (max-width: 600px) {
+  .notFound-code {
+    font-size: 96px;
+    margin-top: 100px;
+  }
+  .text-error {
+    font-size: 18px;
+  }
+  .home-link {
+    font-size: 14px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
