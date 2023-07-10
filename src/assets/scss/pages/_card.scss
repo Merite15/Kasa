@@ -14,7 +14,7 @@
         justify-content: space-between;
         align-items: center;
         padding: 20px 0;
-        color: white;
+        color: $secondary-color;
         margin-top: 150px;
 
         .arrow {
@@ -25,6 +25,113 @@
 
     .count {
         margin-top: 100px;
-        color: white;
+        color: $secondary-color;
+    }
+}
+
+.logement {
+    width: 100%;
+
+    &__title {
+        margin-top: 30px;
+        font-weight: 500;
+        font-size: 36px;
+        color: $primary-color;
+    }
+
+    &__location {
+        font-weight: 500;
+        font-size: 18px;
+        color: $primary-color;
+        margin: 10px 0;
+    }
+
+    &__tags {
+        display: flex;
+        justify-content: normal;
+        margin-top: 15px;
+    }
+}
+
+.logement__host {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    font-size: 18px;
+    color: $primary-color;
+
+    &--rating {
+        margin-top: 40px;
+        color: $primary-color;
+    }
+
+    &--hosting {
+        display: flex;
+        align-items: center;
+        font-size: 18px;
+        color: $primary-color;
+        margin: 20px 0;
+
+        img {
+            display: block;
+            border-radius: 100%;
+            width: 60px;
+            margin: 0 10px;
+        }
+    }
+}
+
+.logement-collapse {
+    width: 49%;
+}
+
+.logement-collapse-group {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+}
+
+
+@media only screen and (max-width: $breakpoint-tablet) {
+    .logement-collapse-group,
+    .flex-between {
+        flex-direction: column;
+    }
+
+    .logement-collapse {
+        width: 100%;
+    }
+
+    .logement__title {
+        font-size: 18px;
+    }
+
+    .host-avatar {
+        width: 40px;
+        margin: 0 10px;
+    }
+
+    .logement__host {
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        align-items: baseline;
+        width: 100%;
+    }
+
+    .logement__location {
+        font-size: 12px;
+    }
+
+    .logement-host1 {
+        font-size: 12px;
+    }
+
+    .fa-2x {
+        font-size: 1em !important;
+    }
+
+    .fa-4x {
+        font-size: 2em !important;
     }
 }
