@@ -1,0 +1,17 @@
+@import "@/assets/scss/utils/variables";
+
+footer {
+    height: 200px;
+    background-color: $third-color;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $secondary-color;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.copyright {
+    margin-top: 20px;
+}
+
