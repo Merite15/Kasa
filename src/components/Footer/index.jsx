@@ -1,6 +1,6 @@
 import white_logo from '@/assets/img/logo/white-logo.svg'
 
-import  "./index.scss";
+import  "./style.scss";
 
 export const Footer = () =>{
     return (

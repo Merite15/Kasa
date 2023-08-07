@@ -2,7 +2,7 @@ import logo from '@/assets/img/logo/logo.svg'
 
 import { NavLink } from "react-router-dom";
 
-import  "./index.scss";
+import  "./style.scss";
 
 export const Header = () => {
     let activeStyle = {

@@ -1,5 +1,7 @@
 import { useState } from 'react';
 
+import  "./style.scss";
+
 export const Carousel = (props) => {
     const { logement } = props
 
