@@ -1,4 +1,4 @@
-/* eslint-disable react/prop-types */
+
 
 export const Banner = (props) => {
     const { title, bgImg } = props

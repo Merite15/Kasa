@@ -16,7 +16,13 @@ export const Property = () => {
             .then((response) => response.json()
                 .then((res) => {
                     const data = res.filter(logement => logement.id === params.id)
-                    setLogement(data[0])
+                    console.log(data);
+                    // console.log( setLogement(data));
+                    // if (data.length > 0) {
+                    //     setLogement(data[0]);
+                    // } else {
+                    //     console.log('Logement not found');
+                    // }
                 })
                 .catch((error) => console.log(error))
             )

@@ -8,7 +8,7 @@ export const Home = () => {
     const [logements, setLogements] = useState([])
 
     useEffect(() => {
-        fetch(`http://127.0.0.1:5173/logements.json`)
+        fetch(`${import.meta.env.VITE_PUBLIC_URL}/logements.json`)
             .then((response) => response.json()
                 .then((data) => {
                     setLogements(data)
