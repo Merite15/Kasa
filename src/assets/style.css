@@ -230,28 +230,6 @@ footer {
   }
 }
 
-.tag {
-  background-color: #ff6060;
-  color: #fff;
-  border-radius: 10px;
-  min-width: 120px;
-  max-width: 200px;
-  padding: 2px 2px;
-  font-size: 14px;
-  font-weight: 300;
-  text-align: center;
-  margin: 0 5px;
-}
-
-@media only screen and (max-width: 600px) {
-  .tag {
-    font-size: 10px;
-    font-weight: 400;
-    width: fit-content;
-    min-width: 80px;
-    border-radius: 5px;
-  }
-}
 .card {
   border-radius: 10px;
   height: 380px;

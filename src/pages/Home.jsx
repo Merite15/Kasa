@@ -13,16 +13,18 @@ export const Home = () => {
                 .then((data) => {
                     setLogements(data)
                 })
-                .catch((error) => console.log(error))
+                .catch((error) => console.error(error))
             )
     }, [])
 
+    
     return (
         <Main>
             <Banner
                 bgImg={banner} title="Chez vous, partout et ailleurs"></Banner>
 
             <div className="cards">
+
                 {logements.map((logement) => {
                     return (
                         <Card key={`${logement.id}`} logement={logement} />

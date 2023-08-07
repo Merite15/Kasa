@@ -1,4 +1,4 @@
-
+import  "./index.scss";
 
 export const Tag = ({ name }) => {
     return (

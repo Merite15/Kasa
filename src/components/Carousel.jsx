@@ -24,6 +24,7 @@ export const Carousel = (props) => {
                     className="slide"
                     style={{ backgroundImage: `url(${logement.pictures[currentElement]})` }}
                 >
+
                     {logement.pictures.length > 1 && (
                         <div className="slide-arrow">
                             <div>
@@ -31,7 +32,7 @@ export const Carousel = (props) => {
                                     <i onClick={handlePreviousClick} className="fa-solid fa-chevron-left fa-4x arrow" />
                                 )}
                             </div>
-                            
+
                             <div>
                                 {currentElement < logement.pictures.length - 1 && (
                                     <i onClick={handleNextClick} className="fa-solid fa-chevron-right fa-4x arrow" />

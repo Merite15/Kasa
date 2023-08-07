@@ -13,18 +13,20 @@ export const Property = () => {
 
     useEffect(() => {
         fetch(`http://localhost:5173/logements.json`)
-            .then((response) => response.json()
-                .then((res) => {
-                    const data = res.filter(logement => logement.id === params.id)
-                    console.log(data);
-                    // console.log( setLogement(data));
-                    // if (data.length > 0) {
-                    //     setLogement(data[0]);
-                    // } else {
-                    //     console.log('Logement not found');
-                    // }
-                })
-                .catch((error) => console.log(error))
+            .then((response) => {
+                response.json()
+                    .then((res) => {
+                        const data = res.filter(logement => logement.id === params.id)
+                        // console.log(data);
+                        // console.log( setLogement(data));
+                        if (data.length > 0) {
+                            setLogement(data[0]);
+                        } else {
+                            console.error('Logement not found');
+                        }
+                    })
+                    .catch((error) => console.log(error))
+                }
             )
     }, [logement, params.id])
 
