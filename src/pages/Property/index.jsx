@@ -1,7 +1,8 @@
-import { Main } from "@/layouts/Main";
-import { Carousel } from "@/components/Carousel";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import { Main } from "@/layouts/Main";
+import { Carousel } from "@/components/Carousel";
+import { Star } from "@/components/Star";
 import { Tag } from "@/components/Tag";
 import { Collapse } from "@/components/Collapse";
 import  "./style.scss";
@@ -13,7 +14,7 @@ export const Property = () => {
     const [logement, setLogement] = useState({})
 
     useEffect(() => {
-        fetch(`http://localhost:5173/logements.json`)
+        fetch(`${import.meta.env.VITE_PUBLIC_URL}/logements.json`)
             .then((response) => {
                 response.json()
                     .then((res) => {
@@ -27,19 +28,7 @@ export const Property = () => {
                     .catch((error) => console.log(error))
                 }
             )
-    }, [logement, params.id])
-
-    const stars = [];
-
-    for (let i = 1; i <= logement.rating; i++) {
-        stars.push(<i key={i} className="fa-solid fa-star fa-2x"></i>);
-    }
-    if (logement.rating < 5 && logement.rating > 0) {
-        let note = 5 - logement.rating
-        for (let i = 1; i <= note; i++) {
-            stars.push(<i key={`${i}-note`} className="fa-regular fa-star fa-2x"></i>);
-        }
-    }
+    }, [params.id])
 
     return (
         <Main>
@@ -50,6 +39,7 @@ export const Property = () => {
                     <div className="logement__location">
                         {logement.location}
                     </div>
+
                     <div className="logement__tags">
                         {logement.tags?.map((tag, i) => {
 
@@ -61,11 +51,7 @@ export const Property = () => {
                 </div>
 
                 <div className="logement__host">
-                    <div className="logement__host--rating">
-                        {stars.map((star) => (
-                            star
-                        ))}
-                    </div>
+                    <Star logement={logement}/>
 
                     <div className="logement__host--hosting">
                         <div>{logement.host?.name}</div>
@@ -74,13 +60,13 @@ export const Property = () => {
                 </div>
             </div>
 
-            <div className="logement-collapse-group">
+            <div className="logement-details">
 
-                <div className="logement-collapse">
+                <div>
                     <Collapse title="Description" content={logement.description}
                         open={true}></Collapse>
                 </div>
-                <div className="logement-collapse">
+                <div>
                     <Collapse title="Équipement" list={logement.equipments}
                         open={true}></Collapse>
                 </div>

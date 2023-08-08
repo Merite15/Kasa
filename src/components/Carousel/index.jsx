@@ -1,6 +1,10 @@
 import { useState } from 'react';
 
-import  "./style.scss";
+import { Counter } from "@/components/Carousel/Counter";
+
+import { ImageSlider } from "@/components/Carousel/ImageSlider";
+
+import "./style.scss";
 
 export const Carousel = (props) => {
     const { logement } = props
@@ -22,29 +26,20 @@ export const Carousel = (props) => {
     return (
         <div>
             {logement.pictures && (
-                <div
-                    className="slide"
-                    style={{ backgroundImage: `url(${logement.pictures[currentElement]})` }}
-                >
+                <div className="slide">
+                    <img src={logement.pictures[currentElement]} alt="carousel_image" />
 
                     {logement.pictures.length > 1 && (
                         <div className="slide-arrow">
-                            <div>
-                                {currentElement > 0 && (
-                                    <i onClick={handlePreviousClick} className="fa-solid fa-chevron-left fa-4x arrow" />
-                                )}
-                            </div>
-
-                            <div>
-                                {currentElement < logement.pictures.length - 1 && (
-                                    <i onClick={handleNextClick} className="fa-solid fa-chevron-right fa-4x arrow" />
-                                )}
-                            </div>
+                            <ImageSlider
+                                currentElement={currentElement}
+                                handlePreviousClick={handlePreviousClick}
+                                handleNextClick={handleNextClick}
+                                totalPictures={logement.pictures.length}
+                            />
                         </div>
                     )}
-                    {logement.pictures.length > 1 && (
-                        <div className="count">{`${currentElement + 1}/${logement.pictures.length}`}</div>
-                    )}
+                    <Counter logement={logement} currentElement={currentElement} />
                 </div>
             )}
         </div>

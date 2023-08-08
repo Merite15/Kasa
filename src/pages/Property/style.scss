@@ -31,11 +31,6 @@
     font-size: 18px;
     color: $primary-color;
 
-    &--rating {
-        margin-top: 40px;
-        color: $primary-color;
-    }
-
     &--hosting {
         display: flex;
         align-items: center;
@@ -52,25 +47,27 @@
     }
 }
 
-.logement-collapse {
-    width: 49%;
-}
-
-.logement-collapse-group {
+.logement-details {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
     width: 100%;
+    gap: 10px;
+
+    div {
+        flex: 1 1 0;
+    }
 }
 
 @media only screen and (max-width: $breakpoint-tablet) {
-    .logement-collapse-group {
+    .logement-details {
         flex-direction: column;
+
+        div {
+            width: auto;
+        }
     }
 
-    .logement-collapse {
-        width: 100%;
-    }
 
     .logement__title {
         font-size: 18px;

@@ -6,6 +6,15 @@
     background: url("./../assets/img/banner.jpeg") no-repeat center;
     background-size: cover;
     border-radius: 25px;
+    position: relative;
+
+    img {
+        position: absolute;
+        width: inherit;
+        height: inherit;
+        object-fit: cover;
+        border-radius: 25px;
+    }
 
     div {
         display: flex;

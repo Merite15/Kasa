@@ -6,13 +6,16 @@
     width: 30%;
     margin: 20px 0;
     background-color: $primary-color;
-    display: flex;
-    align-items: flex-end;
-    padding: 10px;
-    background-size: cover;
-    background-position: left;
-    mix-blend-mode: multiply;
     text-decoration: none !important;
+    position: relative;
+
+    img {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        border-radius: 10px;
+        object-fit: cover;
+    }
 
     span {
         font-style: normal;

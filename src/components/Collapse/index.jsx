@@ -9,15 +9,15 @@ export const Collapse = ({ title, content, open = false, list }) => {
     return (
         <div className="collapse">
             <div className="collapse__head" onClick={() => Switch(!isOpen)}>
-                <div className="collapse__title">
+                <p className="collapse__title">
                     {title}
-                </div>
+                </p>
 
-                <div>
+                <p>
                     {isOpen ? <i className="fa-solid fa-chevron-down fa-2x"></i> :
                         <i className="fa-solid fa-chevron-up fa-2x"></i>}
 
-                </div>
+                </p>
             </div>
             {isOpen &&
                 <div className="collapse__content">
