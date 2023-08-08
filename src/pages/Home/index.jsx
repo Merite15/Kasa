@@ -2,8 +2,8 @@ import { Main } from "@/layouts/Main";
 import { Banner } from "@/components/Banner";
 import { useEffect, useState } from "react";
 import { Card } from "@/components/Card";
-import banner from "@/assets/img/banner.jpeg"
-import  "./style.scss";
+import banner from "./banner.jpeg"
+import "./style.scss";
 
 export const Home = () => {
     const [logements, setLogements] = useState([])
@@ -18,7 +18,7 @@ export const Home = () => {
             )
     }, [])
 
-    
+
     return (
         <Main>
             <Banner

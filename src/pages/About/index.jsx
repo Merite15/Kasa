@@ -1,4 +1,4 @@
-import imgBanner from "@/assets/img/second-banner.jpeg"
+import imgBanner from "./banner.jpeg"
 import { Main } from "@/layouts/Main";
 import { Banner } from "@/components/Banner";
 import { Collapse } from "@/components/Collapse";
@@ -6,7 +6,7 @@ import { Collapse } from "@/components/Collapse";
 export const About = () => {
     return (
         <Main>
-            <Banner bgImg={imgBanner}/>
+            <Banner bgImg={imgBanner} />
 
             <Collapse title="Fiabilité"
                 content="Les annonces postées sur Kasa garantissent une fiabilité totale. Les photos sont conformes aux logements, et toutes les informations sont régulièrement vérifiées  par nos équipes." />
