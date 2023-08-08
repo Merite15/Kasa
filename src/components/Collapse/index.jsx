@@ -1,25 +1,25 @@
 import { useState } from "react";
 
-import  "./style.scss";
+import "./style.scss";
 
 export const Collapse = ({ title, content, open = false, list }) => {
 
-    const [isOpen, Switch] = useState(open);
+    const [collapseStatus, setCollapseStatus] = useState(open);
 
     return (
         <div className="collapse">
-            <div className="collapse__head" onClick={() => Switch(!isOpen)}>
+            <div className="collapse__head" onClick={() => setCollapseStatus(!collapseStatus)}>
                 <p className="collapse__title">
                     {title}
                 </p>
 
                 <p>
-                    {isOpen ? <i className="fa-solid fa-chevron-down fa-2x"></i> :
+                    {collapseStatus ? <i className="fa-solid fa-chevron-down fa-2x"></i> :
                         <i className="fa-solid fa-chevron-up fa-2x"></i>}
 
                 </p>
             </div>
-            {isOpen &&
+            {collapseStatus &&
                 <div className="collapse__content">
                     {content}
                     {list && <ul>

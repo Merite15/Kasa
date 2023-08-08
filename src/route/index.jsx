@@ -6,10 +6,6 @@ import { Property } from "@/pages/Property";
 
 const router = createBrowserRouter([
   {
-    path: "*",
-    element: <NotFound/>
-  },
-  {
     path: "/",
     element: <Home />
   },
@@ -20,8 +16,12 @@ const router = createBrowserRouter([
   {
     path: "/property/:id",
     element: <Property />,
-    errorElement: <NotFound/>
+    errorElement: <NotFound />
   },
+  {
+    path: "*",
+    element: <NotFound />
+  }
 ]);
 
 export default router;

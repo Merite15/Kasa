@@ -1,11 +1,9 @@
-import  "./style.scss";
+import "./style.scss";
 
-export const Banner = (props) => {
-    const { title, bgImg } = props
-
+export const Banner = ({ title, bgImg }) => {
     return (
         <div className="banner">
-            <img src={bgImg} alt="" />
+            <img src={bgImg} alt="banner" />
             <div>
                 <span>{title}</span>
             </div>
