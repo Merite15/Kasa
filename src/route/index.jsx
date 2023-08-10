@@ -15,8 +15,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/property/:id",
-    element: <Property />,
-    errorElement: <NotFound />
+    element: <Property />
   },
   {
     path: "*",

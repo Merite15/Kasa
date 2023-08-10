@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import { Main } from "@/layouts/Main";
 import { Carousel } from "@/components/Carousel";
 import { Star } from "@/components/Star";
@@ -19,6 +19,8 @@ export const Property = () => {
 
     const [error, setError] = useState('');
 
+    const navigate = useNavigate();
+
     useEffect(() => {
         setLoading(true)
         fetch(`${import.meta.env.VITE_PUBLIC_URL}/logements.json`)
@@ -28,7 +30,7 @@ export const Property = () => {
                     if (data.length > 0) {
                         setLogement(data[0]);
                     } else {
-                        setError('Logement not found')
+                        navigate("/404");
                     }
                 })
                 .catch((error) => setError(error))

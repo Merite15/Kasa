@@ -2,7 +2,7 @@ import { Header } from "@/components/Header";
 
 import { Footer } from "@/components/Footer";
 
-import  "./index.scss";
+import "./index.scss";
 
 export const Main = ({ children }) => {
     return (
