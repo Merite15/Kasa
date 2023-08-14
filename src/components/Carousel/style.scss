@@ -44,4 +44,14 @@
         color: $secondary-color;
         z-index: 50;
     }
+
+    @media only screen and (max-width: $breakpoint-tablet) {
+        .slide-arrow {
+            margin-top: 0px;
+        }
+        
+        .count {
+            display: none;
+        }
+    }
 }

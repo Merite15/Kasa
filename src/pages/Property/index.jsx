@@ -3,7 +3,7 @@ import { useParams, useNavigate } from "react-router-dom";
 import { Main } from "@/layouts/Main";
 import { Carousel } from "@/components/Carousel";
 import { Star } from "@/components/Star";
-import { Tag } from "@/components/Tag";
+import { ListTag } from "@/components/List/Tag";
 import { Collapse } from "@/components/Collapse";
 import { Error } from '@/components/Utils/Error';
 import { Loader } from '@/components/Utils/Loader';
@@ -40,7 +40,7 @@ export const Property = () => {
                     }, 1500)
                 })
             )
-    }, [params.id])
+    }, [])
 
     return (
         <Main>
@@ -51,42 +51,37 @@ export const Property = () => {
                 : error ? <Error /> :
                     <>
                         <Carousel logement={logement}></Carousel>
-                        <div>
+
+                        <div className="property">
                             <div className="logement">
-                                <div className="logement__title">{logement.title}</div>
-                                <div className="logement__location">
-                                    {logement.location}
+                                <div className="details">
+                                    <p className="title">{logement.title}</p>
+                                    <p className="location">
+                                        {logement.location}
+                                    </p>
                                 </div>
 
-                                <div className="logement__tags">
-                                    {logement.tags?.map((tag, i) => {
-
-                                        return (
-                                            <Tag key={`${i}-${tag.trim()}`} name={tag} />
-                                        )
-                                    })}
+                                <div className="tags">
+                                    <ListTag logement={logement} />
                                 </div>
                             </div>
 
-                            <div className="logement__host">
-                                <Star logement={logement} />
-
-                                <div className="logement__host--hosting">
-                                    <div>{logement.host?.name}</div>
+                            <div className="review">
+                                <div className="hosting">
+                                    <p>{logement.host?.name}</p>
                                     <img className="host-avatar" src={logement.host?.picture} alt={logement.host?.name} />
                                 </div>
+
+                                <Star logement={logement} />
                             </div>
                         </div>
 
-                        <div className="logement-details">
-                            <div>
-                                <Collapse title="Description" content={logement.description}
-                                    open={true}></Collapse>
-                            </div>
-                            <div>
-                                <Collapse title="Équipement" list={logement.equipments}
-                                    open={true}></Collapse>
-                            </div>
+                        <div className="logement-description">
+                            <Collapse title="Description" content={logement.description}
+                                open={true}></Collapse>
+
+                            <Collapse title="Équipement" list={logement.equipments}
+                                open={true}></Collapse>
                         </div>
                     </>
             }

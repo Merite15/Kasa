@@ -1,75 +1,99 @@
 @import "@/assets/scss/utils/variables";
 
-.logement {
-    width: 100%;
+.property {
+    display: flex;
+    justify-content: space-between;
+}
 
-    &__title {
+.logement {
+    display: flex;
+    flex-direction: column;
+
+    .details {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .title {
         margin-top: 30px;
         font-weight: 500;
         font-size: 36px;
         color: $primary-color;
     }
 
-    &__location {
+    .location {
         font-weight: 500;
         font-size: 18px;
         color: $primary-color;
-        margin: 10px 0;
-    }
-
-    &__tags {
-        display: flex;
-        justify-content: normal;
-        margin-top: 15px;
     }
 }
 
-.logement__host {
+.tags {
     display: flex;
-    align-items: baseline;
-    justify-content: space-between;
-    font-size: 18px;
-    color: $primary-color;
-
-    &--hosting {
-        display: flex;
-        align-items: center;
-        font-size: 18px;
-        color: $primary-color;
-        margin: 20px 0;
-
-        img {
-            display: block;
-            border-radius: 100%;
-            width: 60px;
-            margin: 0 10px;
-        }
-    }
+    justify-content: normal;
+    margin-top: 15px;
 }
 
-.logement-details {
+.logement-description {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
     width: 100%;
     gap: 10px;
+}
 
-    div {
-        flex: 1 1 0;
+.hosting {
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    color: $primary-color;
+    margin: 20px 0;
+    justify-content: end;
+
+    img {
+        display: block;
+        border-radius: 100%;
+        width: 60px;
+        margin-left: 30px;
+    }
+
+    P {
+        width: 30px;
     }
 }
 
 @media only screen and (max-width: $breakpoint-tablet) {
-    .logement-details {
+    .property {
         flex-direction: column;
-
-        div {
-            width: auto;
-        }
     }
 
+    .logement {
+        flex-direction: column;
+    }
 
-    .logement__title {
+    .details {
+        flex-direction: column;
+    }
+
+    .logement-description {
+        flex-direction: column;
+    }
+
+    .review {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row-reverse;
+        align-items: center;
+    }
+
+    .hosting {
+        width: 140px;
+    }
+
+    .title {
         font-size: 18px;
     }
 
@@ -78,18 +102,7 @@
         margin: 0 10px;
     }
 
-    .logement__host {
-        flex-direction: row-reverse;
-        justify-content: space-between;
-        align-items: baseline;
-        width: 100%;
-    }
-
-    .logement__location {
-        font-size: 12px;
-    }
-
-    .logement-host1 {
+    .location {
         font-size: 12px;
     }
 

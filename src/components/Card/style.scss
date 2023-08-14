@@ -8,6 +8,7 @@
     background-color: $primary-color;
     text-decoration: none !important;
     position: relative;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
 
     img {
         position: absolute;
@@ -28,7 +29,7 @@
 
 @media only screen and (max-width: $breakpoint-tablet) {
     .card {
-        border-radius: 10px;
+        background-color: transparent;
         height: 250px;
         width: 100%;
         margin: 10px 0;

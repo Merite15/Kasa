@@ -1,11 +1,12 @@
 import { Main } from "@/layouts/Main";
 import { Banner } from "@/components/Banner";
 import { useEffect, useState } from "react";
-import { Card } from "@/components/Card";
 import { Error } from '@/components/Utils/Error';
 import { Loader } from '@/components/Utils/Loader';
 import banner from "./banner.jpeg"
 import "./style.scss";
+
+import { ListProperty } from "@/components/List/Property";
 
 export const Home = () => {
     const [logements, setLogements] = useState([])
@@ -39,12 +40,7 @@ export const Home = () => {
 
                 : error ? <Error /> :
                     <div className="cards">
-
-                        {logements.map((logement) => {
-                            return (
-                                <Card key={`${logement.id}`} logement={logement} />
-                            )
-                        })}
+                        <ListProperty logements={logements} />
                     </div>
             }
         </Main>

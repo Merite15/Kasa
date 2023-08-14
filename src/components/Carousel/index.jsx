@@ -6,8 +6,7 @@ import { ImageSlider } from "@/components/Carousel/ImageSlider";
 
 import "./style.scss";
 
-export const Carousel = (props) => {
-    const { logement } = props
+export const Carousel = ({logement}) => {
 
     const [currentElement, setCurrentElement] = useState(0);
 

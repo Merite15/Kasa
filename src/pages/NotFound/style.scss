@@ -1,8 +1,6 @@
 @import "@/assets/scss/utils/variables";
 
 .notFound {
-    display: flex;
-    justify-content: center;
     width: 100%;
     text-align: center;
 
@@ -10,7 +8,6 @@
         font-style: normal;
         font-weight: 700;
         font-size: 288px;
-        line-height: 142.6%;
         color: $primary-color;
     }
 
@@ -19,7 +16,6 @@
         font-weight: 500;
         font-size: 36px;
         color: $primary-color;
-        margin: 30px 0;
     }
 }
 
@@ -44,6 +40,7 @@
 
     .notFound__text {
         font-size: 18px;
+        padding: 0px 30px;
     }
 
     .home-link {
