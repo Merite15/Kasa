@@ -45,6 +45,11 @@
     gap: 10px;
 }
 
+.review {
+    display: flex;
+    flex-direction: column;
+}
+
 .hosting {
     display: flex;
     align-items: center;
@@ -57,11 +62,10 @@
         display: block;
         border-radius: 100%;
         width: 60px;
-        margin-left: 30px;
     }
 
     P {
-        width: 30px;
+        width: 80px;
     }
 }
 
@@ -91,6 +95,10 @@
 
     .hosting {
         width: 140px;
+
+        p {
+            width: 100%;
+        }
     }
 
     .title {

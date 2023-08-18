@@ -4,9 +4,8 @@ import { useEffect, useState } from "react";
 import { Error } from '@/components/Utils/Error';
 import { Loader } from '@/components/Utils/Loader';
 import banner from "./banner.jpeg"
-import "./style.scss";
-
 import { ListProperty } from "@/components/List/Property";
+import "./style.scss";
 
 export const Home = () => {
     const [logements, setLogements] = useState([])
